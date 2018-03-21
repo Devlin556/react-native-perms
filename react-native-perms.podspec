@@ -11,7 +11,7 @@ s.description    = package['description']
 s.license        = package['license']
 s.author         = package['author']
 s.homepage       = package['homepage']
-s.source         = { :git => 'https://github.com/httpdeveloper/react-native-custom-module', :tag => s.version }
+s.source         = { :git => 'https://github.com/Devlin556/react-native-perms.git', :tag => s.version }
 
 s.requires_arc   = true
 s.platform       = :ios, '8.0'
