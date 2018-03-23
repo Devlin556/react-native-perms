@@ -1,12 +1,12 @@
 {
   "name": "react-native-perms",
-  "version": "1.0.0",
-  "description": "Hello world!",
+  "version": "1.0.1",
+  "description": "React native package for permissions!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "example.com",
-  "author": "",
+  "author": "Alexey Maligon <fania@milkandcartoons.com>",
   "license": "ISC"
 }

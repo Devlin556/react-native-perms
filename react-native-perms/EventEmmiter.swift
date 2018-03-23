@@ -1,37 +1,40 @@
 //
-//  EventEmmiter.swift
-//  react-native-perms
+//  EventEmitter.swift
+//  permissions
 //
-//  Created by Fania on 21.03.2018.
-//  Copyright © 2018 Fania. All rights reserved.
+//  Created by Алексей Малигон on 23.03.2018.
+//  Copyright © 2018 Facebook. All rights reserved.
 //
 
 import Foundation
+
 class EventEmitter {
-/// Shared Instance.
+    /// Shared Instance.
+    
     public static var sharedInstance = EventEmitter()
-
+    
     // ReactNativeEventEmitter is instantiated by React Native with the bridge.
-    private static var eventEmitter: ReactNativeEventEmitter!
-
+    private static var eventEmitter: PermissionEventEmitter!
+    
     private init() {}
-
+    
     // When React Native instantiates the emitter it is registered here.
-    func registerEventEmitter(eventEmitter: ReactNativeEventEmitter) {
+    func registerEventEmitter(eventEmitter: PermissionEventEmitter) {
         EventEmitter.eventEmitter = eventEmitter
     }
-
+    
     func dispatch(name: String, body: Any?) {
-        eventEmitter.sendEvent(withName: name, body: body)
+        EventEmitter.eventEmitter.sendEvent(withName: name, body: body)
     }
-
+    
     /// All Events which must be support by React Native.
     lazy var allEvents: [String] = {
-        var allEventNames: [String] = []
+        var allEventNames: [String] = ["locationPermissionChange"]
         
         // Append all events here
         
         return allEventNames
     }()
-
+    
 }
+
