@@ -11,7 +11,7 @@
 		35322E0E206292D0008F7B90 /* react_native_perms.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 35322E0B206292D0008F7B90 /* react_native_perms.h */; };
 		35322E16206292F0008F7B90 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35322E15206292F0008F7B90 /* LocationManager.swift */; };
 		35322E18206294DF008F7B90 /* EventEmmiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35322E17206294DF008F7B90 /* EventEmmiter.swift */; };
-		35322E1C20629562008F7B90 /* ReactNativeEventEmmiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35322E1B20629562008F7B90 /* ReactNativeEventEmmiter.swift */; };
+		6CC2F491206564AC002A58EC /* PermissionEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2F490206564AC002A58EC /* PermissionEventEmitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,8 +34,8 @@
 		35322E14206292F0008F7B90 /* react-native-perms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "react-native-perms-Bridging-Header.h"; sourceTree = "<group>"; };
 		35322E15206292F0008F7B90 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		35322E17206294DF008F7B90 /* EventEmmiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmmiter.swift; sourceTree = "<group>"; };
-		35322E1B20629562008F7B90 /* ReactNativeEventEmmiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactNativeEventEmmiter.swift; sourceTree = "<group>"; };
 		35322E242062965B008F7B90 /* react-native-perms.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "react-native-perms.podspec"; sourceTree = "<group>"; };
+		6CC2F490206564AC002A58EC /* PermissionEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionEventEmitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +73,8 @@
 				35322E15206292F0008F7B90 /* LocationManager.swift */,
 				35322E14206292F0008F7B90 /* react-native-perms-Bridging-Header.h */,
 				35322E17206294DF008F7B90 /* EventEmmiter.swift */,
-				35322E1B20629562008F7B90 /* ReactNativeEventEmmiter.swift */,
 				35322E242062965B008F7B90 /* react-native-perms.podspec */,
+				6CC2F490206564AC002A58EC /* PermissionEventEmitter.swift */,
 			);
 			path = "react-native-perms";
 			sourceTree = "<group>";
@@ -137,10 +137,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC2F491206564AC002A58EC /* PermissionEventEmitter.swift in Sources */,
 				35322E18206294DF008F7B90 /* EventEmmiter.swift in Sources */,
 				35322E16206292F0008F7B90 /* LocationManager.swift in Sources */,
 				35322E0D206292D0008F7B90 /* react_native_perms.m in Sources */,
-				35322E1C20629562008F7B90 /* ReactNativeEventEmmiter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
