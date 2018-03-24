@@ -1,3 +1,4 @@
+//
 import Foundation
 import CoreLocation
 
@@ -17,9 +18,8 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
     }
     
     @objc func getPermission(
-        _ resolve: @escaping RCTPromiseResolveBlock,
-        _ reject: @escaping RCTPromiseRejectBlock) -> Void {
-        resolve(currentAuthorizationStatus)
+        _ callback: RCTResponseSenderBlock) -> Void {
+        callback([NSNull(),currentAuthorizationStatus])
     }
     
     
