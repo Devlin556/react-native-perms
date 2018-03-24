@@ -1,11 +1,3 @@
-//
-//  LocationManager.swift
-//
-//
-//  Created by Алексей Малигон on 23.03.2018.
-//  Copyright © 2018 Facebook. All rights reserved.
-//
-
 import Foundation
 import CoreLocation
 
@@ -25,9 +17,8 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
     }
     
     @objc func getPermission(
-        _ resolve: @escaping RCTPromiseResolveBlock,
-        rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
-        resolve(currentAuthorizationStatus)
+        callback: RCTResponseSenderBlock ) -> Void {
+        callback([NSNull(), currentAuthorizationStatus])
     }
     
     

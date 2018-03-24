@@ -1,6 +1,12 @@
-import { NativeModules, NativeEventEmitter } from 'react-native';
+import {
+  NativeModules,
+  NativeEventEmitter
+} from 'react-native';
 
-const { PermissionEventEmitter, LocationPermissionManager } = NativeModules;
+const {
+  PermissionEventEmitter,
+  LocationPermissionManager
+} = NativeModules;
 
 export default class ReactNativePerms {
   static emitter = new NativeEventEmitter(PermissionEventEmitter);
@@ -8,6 +14,6 @@ export default class ReactNativePerms {
     ReactNativePerms.emitter.addListener(name, callback);
   }
   getLocationPermission() {
-    return LocationPermissionManager.getPermission();
+    return new Promise(resolve => LocationPermissionManager.getPermission((err, res) => resolve(res)));
   }
 }
