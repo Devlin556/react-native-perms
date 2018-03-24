@@ -11,6 +11,6 @@ RCT_EXTERN_METHOD(supportedEvents)
 @interface RCT_EXTERN_MODULE (LocationPermissionManager, NSObject)
 
 RCT_EXTERN_METHOD(getPermission
-                  : (RCTResponseSenderBlock)callback)
+                  : (RCTPromieResolveBlock)resolve(RCTPromiseRejectsBlock) reject)
 
 @end

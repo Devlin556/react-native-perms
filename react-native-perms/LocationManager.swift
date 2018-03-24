@@ -17,8 +17,9 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
     }
     
     @objc func getPermission(
-        callback: RCTResponseSenderBlock ) -> Void {
-        callback([NSNull(), currentAuthorizationStatus])
+        _ resolve: @escaping RCTPromiseResolveBlock,
+        _ reject: @escaping RCTPromiseRejectBlock) -> Void {
+        resolve(currentAuthorizationStatus)
     }
     
     
