@@ -7,7 +7,7 @@ export default class ReactNativePerms {
   addEventListener(name, callback) {
     ReactNativePerms.emitter.addListener(name, callback);
   }
-  async getLocationPermission() {
-    return await LocationPermissionManager.getPermission();
+  getLocationPermission() {
+    return LocationPermissionManager.getPermission();
   }
 }
