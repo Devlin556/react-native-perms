@@ -17,7 +17,7 @@ class EventEmitter {
     }
     
     lazy var allEvents: [String] = {
-        var allEventNames: [String] = ["locationPermissionChange"]
+        var allEventNames: [String] = Constants.EVENTS_LIST
         
         return allEventNames
     }()

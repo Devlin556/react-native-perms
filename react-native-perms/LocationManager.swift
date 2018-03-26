@@ -14,13 +14,25 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
         
         locManager = CLLocationManager()
         locManager.delegate = self
-        locManager.requestWhenInUseAuthorization();
     }
     
     @objc func getPermission(
         _ resolve: @escaping RCTPromiseResolveBlock,
         rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
         resolve(currentAuthorizationStatus)
+    }
+    
+    @objc func requestAuthorization(_ type: String) {
+        switch type {
+        case "always":
+            locManager.requestWhenInUseAuthorization();
+            break;
+        case "inUse":
+            locManager.requestWhenInUseAuthorization();
+            break;
+        default:
+            locManager.requestWhenInUseAuthorization();
+        }
     }
     
     

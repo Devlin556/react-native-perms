@@ -14,4 +14,19 @@ RCT_EXTERN_METHOD(getPermission
                   : (RCTPromiseResolveBlock)resolve rejecter
                   : (RCTPromiseRejectBlock)reject)
 
+RCT_EXTERN_METHOD(requestAuthorization
+                  : (NSString*)type)
+
+@end
+
+@interface RCT_EXTERN_MODULE (NotificationPermissionManager, NSObject)
+
+RCT_EXTERN_METHOD(getPermission
+                  : (RCTPromiseResolveBlock)resolve rejecter
+                  : (RCTPromiseRejectBlock)reject)
+
+RCT_EXTERN_METHOD(requestAuthorization
+                  : (RCTPromiseResolveBlock)resolve rejecter
+                  : (RCTPromiseRejectBlock)reject)
+
 @end
