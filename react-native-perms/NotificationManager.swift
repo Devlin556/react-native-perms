@@ -28,11 +28,10 @@ open class NotificationPermissionManager: NSObject {
                                     rejecter reject: @escaping RCTPromiseRejectBlock) {
 
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { (res, err) in
-            if let _ = res {
-                resolve(res)
-            }else {
-                reject(err)
+            if err != nil {
+                reject(err.debugDescription, err.debugDescription, err)
             }
+            resolve(res)
         }
     }
 }

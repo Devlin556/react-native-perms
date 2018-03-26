@@ -21,6 +21,11 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
         rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
         resolve(currentAuthorizationStatus)
     }
+
+    deinit {
+        locManager = nil;
+    }
+    
     
     @objc func requestAuthorization(_ type: String) {
         switch type {

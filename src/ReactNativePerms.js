@@ -50,7 +50,7 @@ export default class ReactNativePerms {
         reject("Android didn't allow request notification permission")
       );
     } else {
-      return NotificationPermissionManager.getPermission();
+      return NotificationPermissionManager.requestAuthorization();
     }
   }
 
