@@ -25,7 +25,7 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
     @objc func requestAuthorization(_ type: String) {
         switch type {
         case "always":
-            locManager.requestWhenInUseAuthorization();
+            locManager.requestAlwaysAuthorization();
             break;
         case "inUse":
             locManager.requestWhenInUseAuthorization();
