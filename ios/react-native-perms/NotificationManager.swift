@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 
+@available(iOS 10.0, *)
 @objc(NotificationPermissionManager)
 
 open class NotificationPermissionManager: NSObject {
