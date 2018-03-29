@@ -1,1 +1,3 @@
-console.log(1);
+import ReactNativePerms from './src';
+
+export default ReactNativePerms;

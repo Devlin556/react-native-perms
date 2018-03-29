@@ -1,12 +1,21 @@
 {
   "name": "react-native-perms",
-  "version": "1.0.1",
+  "version": "0.0.13",
   "description": "React native package for permissions!",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/Devlin556/react-native-perms.git"
   },
-  "homepage": "example.com",
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios",
+    "permissions",
+    "react-native-permissions"
+  ],
+  "homepage": "https://github.com/Devlin556/react-native-perms/",
   "author": "Alexey Maligon <fania@milkandcartoons.com>",
   "license": "ISC"
 }
