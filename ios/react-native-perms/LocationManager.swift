@@ -26,17 +26,24 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
         locManager = nil;
     }
     
+    @objc func openSettings() {
+        let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: nil)
+        }
+    }
+    
     
     @objc func requestAuthorization(_ type: String) {
         switch type {
         case "always":
-            locManager.requestAlwaysAuthorization();
+            locManager.requestAlwaysAuthorization()
             break;
         case "inUse":
-            locManager.requestWhenInUseAuthorization();
+            locManager.requestWhenInUseAuthorization()
             break;
         default:
-            locManager.requestWhenInUseAuthorization();
+            locManager.requestWhenInUseAuthorization()
         }
     }
     

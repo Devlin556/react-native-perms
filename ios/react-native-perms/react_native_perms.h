@@ -17,6 +17,8 @@ RCT_EXTERN_METHOD(getPermission
 RCT_EXTERN_METHOD(requestAuthorization
                   : (NSString*)type)
 
+RCT_EXTERN_METHOD(openSettings)
+
 @end
 
 @interface RCT_EXTERN_MODULE (NotificationPermissionManager, NSObject)

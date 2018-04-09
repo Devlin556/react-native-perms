@@ -54,6 +54,12 @@ export default class ReactNativePerms {
     }
   }
 
+  openSettings() {
+    if (Platform.OS === 'ios') {
+      LocationPermissionManager.openSettings();
+    }
+  }
+
   getLocationPermission() {
     if (Platform.OS === 'android') {
       return PermissionsAndroid.check(
