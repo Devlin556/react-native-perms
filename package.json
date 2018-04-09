@@ -1,6 +1,6 @@
 {
   "name": "react-native-perms",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "React native package for permissions!",
   "main": "index.js",
   "scripts": {},
@@ -15,6 +15,9 @@
     "permissions",
     "react-native-permissions"
   ],
+  "peerDependencies": {
+    "react-native": ">=0.47.0"
+  },
   "homepage": "https://github.com/Devlin556/react-native-perms/",
   "author": "Alexey Maligon <fania@milkandcartoons.com>",
   "license": "ISC"
