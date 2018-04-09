@@ -28,8 +28,8 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
     
     @objc func openSettings() {
         let settingsUrl = URL(string: UIApplicationOpenSettingsURLString)
-        if UIApplication.shared.canOpenURL(settingsUrl) {
-            UIApplication.shared.open(settingsUrl, completionHandler: nil)
+        if UIApplication.shared.canOpenURL(settingsUrl!) {
+            UIApplication.shared.open(settingsUrl!, completionHandler: nil)
         }
     }
     
