@@ -1,6 +1,6 @@
 {
   "name": "react-native-perms",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "React native package for permissions!",
   "main": "index.js",
   "scripts": {},
