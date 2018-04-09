@@ -1,5 +1,6 @@
 package com.alexey_milk.react_native_perms;
 
+import android.os.Bundle;  
 import android.provider.Settings;
 import android.content.Intent;
 import android.app.Activity;
