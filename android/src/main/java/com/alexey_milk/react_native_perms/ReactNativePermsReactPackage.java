@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import android.view.ViewManager
+
 public class ReactNativePermsReactPackage implements ReactPackage {
 
     // Deprecated RN 0.47
