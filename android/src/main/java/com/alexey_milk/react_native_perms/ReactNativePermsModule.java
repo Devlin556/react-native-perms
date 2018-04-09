@@ -8,7 +8,7 @@ import android.provider.Settings;
 import android.content.Intent;
 
 public class ReactNativePermsModule extends ReactContextBaseJavaModule{
-    private ReactContext reactContext;
+    private ReactApplicationContext reactContext;
     
     public ReactNativePermsModule(ReactApplicationContext reactContext) {
         super(reactContext);
