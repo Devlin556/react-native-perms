@@ -22,8 +22,11 @@ public class ReactNativePermsModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void openSettings() {
-        Intent settings = new Intent(android.provider.Settings.ACTION_SETTINGS);
+        Intent settings = new Intent();
+        settings.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        Uri uri = Uri.fromParts("package", getPackageName(), null);
         settings.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        settings.setData(uri);
         reactContext.startActivity(settings);
     }
 }
