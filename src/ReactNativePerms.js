@@ -66,8 +66,16 @@ export default class ReactNativePerms {
 
   getLocationPermission() {
     if (Platform.OS === 'android') {
-      return PermissionsAndroid.check(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+      return new Promise(resolve =>
+        PermissionsAndroid.check(
+          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+        ).then(res => {
+          if (res) {
+            resolve('authorizedWhenInUse');
+          } else {
+            resolve(null);
+          }
+        })
       );
     } else {
       return LocationPermissionManager.getPermission();
