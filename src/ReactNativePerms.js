@@ -73,7 +73,7 @@ export default class ReactNativePerms {
           if (res) {
             resolve('authorizedWhenInUse');
           } else {
-            resolve(null);
+            resolve('undetermined');
           }
         })
       );
