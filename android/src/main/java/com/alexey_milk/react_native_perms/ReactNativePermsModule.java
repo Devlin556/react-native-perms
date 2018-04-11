@@ -7,9 +7,9 @@ import com.facebook.react.bridge.ReactMethod;
 import android.provider.Settings;
 import android.content.Intent;
 
-public class ReactNativePermsModule extends ReactContextBaseJavaModule{
+public class ReactNativePermsModule extends ReactContextBaseJavaModule {
     private ReactApplicationContext reactContext;
-    
+
     public ReactNativePermsModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
@@ -22,6 +22,8 @@ public class ReactNativePermsModule extends ReactContextBaseJavaModule{
 
     @ReactMethod
     public void openSettings() {
-       reactContext.startActivity(new Intent(android.provider.Settings.ACTION_SETTINGS));
+        Intent settings = new Intent(android.provider.Settings.ACTION_SETTINGS);
+        settings.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        reactContext.startActivity();
     }
 }
