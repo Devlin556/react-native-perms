@@ -11,6 +11,8 @@ const {
   NotificationPermissionManager,
 } = NativeModules;
 
+const AndroidNativeModule = NativeModules.ReactNativePerms;
+
 export default class ReactNativePerms {
   static emitter = new NativeEventEmitter(PermissionEventEmitter);
   /**
@@ -57,6 +59,8 @@ export default class ReactNativePerms {
   openSettings() {
     if (Platform.OS === 'ios') {
       LocationPermissionManager.openSettings();
+    } else {
+      AndroidNativeModule.openSettings();
     }
   }
 
