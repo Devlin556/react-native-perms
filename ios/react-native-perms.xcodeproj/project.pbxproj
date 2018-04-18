@@ -36,7 +36,6 @@
 		35322E14206292F0008F7B90 /* react-native-perms-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "react-native-perms-Bridging-Header.h"; sourceTree = "<group>"; };
 		35322E15206292F0008F7B90 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		35322E17206294DF008F7B90 /* EventEmmiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEmmiter.swift; sourceTree = "<group>"; };
-		35322E242062965B008F7B90 /* react-native-perms.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "react-native-perms.podspec"; sourceTree = "<group>"; };
 		6C52D7862069543B00415C1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6C52D7882069584000415C1B /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		6CC2F490206564AC002A58EC /* PermissionEventEmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionEventEmitter.swift; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 				35322E15206292F0008F7B90 /* LocationManager.swift */,
 				35322E14206292F0008F7B90 /* react-native-perms-Bridging-Header.h */,
 				35322E17206294DF008F7B90 /* EventEmmiter.swift */,
-				35322E242062965B008F7B90 /* react-native-perms.podspec */,
 				6CC2F490206564AC002A58EC /* PermissionEventEmitter.swift */,
 				6C52D7862069543B00415C1B /* Constants.swift */,
 				6C52D7882069584000415C1B /* NotificationManager.swift */,
