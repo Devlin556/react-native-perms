@@ -48,3 +48,10 @@ RCT_EXTERN_METHOD(getPermission
                   : (RCTPromiseResolveBlock)resolve rejecter
                   : (RCTPromiseRejectBlock)reject)
 @end
+
+@interface RCT_EXTERN_MODULE (MotionPermissionManager, NSObject)
+
+RCT_EXTERN_METHOD(getPermission
+                  : (RCTPromiseResolveBlock)resolve rejecter
+                  : (RCTPromiseRejectBlock)reject)
+@end
