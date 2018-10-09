@@ -21,7 +21,7 @@ open class LocationPermissionManager: NSObject, CLLocationManagerDelegate {
         rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
         resolve(currentAuthorizationStatus)
     }
-
+    
     deinit {
         locManager = nil;
     }
