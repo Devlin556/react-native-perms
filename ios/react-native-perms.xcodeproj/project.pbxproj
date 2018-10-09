@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C42508D216D17DC00BBA73B /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42508C216D17DC00BBA73B /* CameraManager.swift */; };
+		6C42508F216D1C7F00BBA73B /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C42508E216D1C7F00BBA73B /* MotionManager.swift */; };
 		6C4C4BCB2088AE31004DC001 /* react_native_perms.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4C4BC92088AE31004DC001 /* react_native_perms.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C4C4BD22088AE82004DC001 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C4BD12088AE82004DC001 /* Constants.swift */; };
 		6C4C4BD52088AF5E004DC001 /* react_native_perms.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C4BD42088AF5E004DC001 /* react_native_perms.m */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		6C42508C216D17DC00BBA73B /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		6C42508E216D1C7F00BBA73B /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		6C4C4BC62088AE31004DC001 /* react_native_perms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = react_native_perms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4C4BC92088AE31004DC001 /* react_native_perms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = react_native_perms.h; sourceTree = "<group>"; };
 		6C4C4BCA2088AE31004DC001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				6C4C4BDA2088AFBF004DC001 /* NotificationManager.swift */,
 				6C4C4BDC2088AFD3004DC001 /* PermissionEventEmmiter.swift */,
 				6C42508C216D17DC00BBA73B /* CameraManager.swift */,
+				6C42508E216D1C7F00BBA73B /* MotionManager.swift */,
 			);
 			path = "react-native-perms";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				6C4C4BD92088AFAC004DC001 /* LocationManager.swift in Sources */,
 				6C42508D216D17DC00BBA73B /* CameraManager.swift in Sources */,
 				6C4C4BD72088AF77004DC001 /* EventEmmiter.swift in Sources */,
+				6C42508F216D1C7F00BBA73B /* MotionManager.swift in Sources */,
 				6C4C4BDB2088AFBF004DC001 /* NotificationManager.swift in Sources */,
 				6C4C4BDD2088AFD3004DC001 /* PermissionEventEmmiter.swift in Sources */,
 				6C4C4BD52088AF5E004DC001 /* react_native_perms.m in Sources */,
