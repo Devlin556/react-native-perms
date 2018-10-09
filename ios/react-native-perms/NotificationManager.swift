@@ -17,15 +17,6 @@ open class NotificationPermissionManager: NSObject {
     
     @objc func getPermission(_ resolve: @escaping RCTPromiseResolveBlock,
                              rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
-//        if #available(iOS 10, *) {
-//            UNUserNotificationCenter.current().getNotificationSettings(completionHandler: {settings in
-//                switch(settings.authorizationStatus) {
-//                case .authorized: resolve("authorized"); break;
-//                case .denied: resolve("denied"); break;
-//                case .notDetermined: resolve("notDetermined"); break;
-//                }
-//            })
-//        }
         if #available(iOS 9, *) {
             var isRegistered = UIApplication.shared.isRegisteredForRemoteNotifications
             resolve(isRegistered)

@@ -1,6 +1,15 @@
+//
+//  react_native_perms.h
+//  react-native-perms
+//
+//  Created by Алексей Малигон on 19.04.2018.
+//  Copyright © 2018 Алексей Малигон. All rights reserved.
+//
+
 #import <Foundation/Foundation.h>
-#import <React/RCTBridgeModule.h>
-#import <React/RCTEventEmitter.h>
+#import "React/RCTBridgeModule.h"
+#import "React/RCTEventEmitter.h"
+
 
 @interface RCT_EXTERN_MODULE (PermissionEventEmitter, RCTEventEmitter)
 
