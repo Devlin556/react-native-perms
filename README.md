@@ -11,7 +11,7 @@ React Native package for manage permissions on ios and android
 - [ ] Contacts
 - [ ] Reminders
 - [ ] Events
-- [ ] Motion
+- [x] Motion
 - [ ] Microphone
 - [ ] MediaLibrary
 - [ ] SpeechRecognizer
