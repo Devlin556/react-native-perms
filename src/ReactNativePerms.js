@@ -11,6 +11,8 @@ const {
   NotificationPermissionManager,
 } = NativeModules;
 
+const AndroidNativeModule = NativeModules.ReactNativePerms;
+
 export default class ReactNativePerms {
   static emitter = new NativeEventEmitter(PermissionEventEmitter);
   /**
@@ -54,10 +56,26 @@ export default class ReactNativePerms {
     }
   }
 
+  openSettings() {
+    if (Platform.OS === 'ios') {
+      LocationPermissionManager.openSettings();
+    } else {
+      AndroidNativeModule.openSettings();
+    }
+  }
+
   getLocationPermission() {
     if (Platform.OS === 'android') {
-      return PermissionsAndroid.check(
-        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+      return new Promise(resolve =>
+        PermissionsAndroid.check(
+          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+        ).then(res => {
+          if (res) {
+            resolve('authorizedWhenInUse');
+          } else {
+            resolve('undetermined');
+          }
+        })
       );
     } else {
       return LocationPermissionManager.getPermission();

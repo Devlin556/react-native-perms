@@ -8,31 +8,44 @@
 
 import Foundation
 import UserNotifications
+import UIKit
 
-@available(iOS 10.0, *)
 @objc(NotificationPermissionManager)
 
 open class NotificationPermissionManager: NSObject {
-    var notificationCenter = UNUserNotificationCenter.current()
+    
     
     @objc func getPermission(_ resolve: @escaping RCTPromiseResolveBlock,
                              rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
-        notificationCenter.getNotificationSettings(completionHandler: {settings in
-            switch(settings.authorizationStatus) {
-                case .authorized: resolve("authorized"); break;
-                case .denied: resolve("denied"); break;
-                case .notDetermined: resolve("notDetermined"); break;
-            }
-        })
+        if #available(iOS 9, *) {
+            var isRegistered = UIApplication.shared.isRegisteredForRemoteNotifications
+            resolve(isRegistered)
+        }
+        
     }
     @objc func requestAuthorization(_ resolve: @escaping RCTPromiseResolveBlock,
                                     rejecter reject: @escaping RCTPromiseRejectBlock) {
-
-        notificationCenter.requestAuthorization(options: [.alert, .sound]) { (res, err) in
-            if err != nil {
-                reject(err.debugDescription, err.debugDescription, err)
-            }
-            resolve(res)
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in
+                if error != nil {
+                    reject(error.debugDescription, error.debugDescription, error)
+                }
+                resolve(granted)}
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+            // iOS 9 support
+        else if #available(iOS 9, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+            // iOS 8 support
+        else if #available(iOS 8, *) {
+            UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil))
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+            // iOS 7 support
+        else {
+            UIApplication.shared.registerForRemoteNotifications(matching: [.badge, .sound, .alert])
         }
     }
 }
